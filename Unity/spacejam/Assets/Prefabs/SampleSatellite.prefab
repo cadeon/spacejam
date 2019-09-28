@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 792452149}
   - component: {fileID: 792452153}
   - component: {fileID: 8628799123640739574}
+  - component: {fileID: 617837622931464111}
   m_Layer: 0
   m_Name: SampleSatellite
-  m_TagString: Gravity
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,6 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869f0bc9c3ea842409a32844db85f42e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxGravDist: 4
+  maxGravity: 35
 --- !u!114 &8628799123640739574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,3 +147,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  debrisObject: {fileID: 118931987274382205, guid: fbcbda948839be545b75775d948de1c6,
+    type: 3}
+  numberOfDebris: 4
+--- !u!114 &617837622931464111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118931987274382205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2046e49fc57538447a1de758f758a743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayName: Sat
+  labelObject: {fileID: 5494863609578728748, guid: 92f6021bb48e97344a8b4f6e4fb4b92b,
+    type: 3}

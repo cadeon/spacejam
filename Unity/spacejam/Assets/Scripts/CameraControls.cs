@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CameraControls : MonoBehaviour
 {
-    public float maxZoomOut = 40.0f;
+    public float minZoom = 1.0f;
+    public float maxZoom = 40.0f;
     Camera cam; 
 
     // Start is called before the first frame update
@@ -16,13 +17,13 @@ public class CameraControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f) // forward
         {
-            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize + 1.0f, 0.0f, maxZoomOut);
+            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize + 1.0f, minZoom, maxZoom);
         }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        else if (Input.GetAxis("Mouse ScrollWheel") > 0f) // backwards
         {
-            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize - 1.0f, 0.0f, maxZoomOut);
+            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize - 1.0f, minZoom, maxZoom);
         }
     }
 }
