@@ -9,7 +9,7 @@ public class Destruction : MonoBehaviour
     public int numberOfDebris;
     bool isQuitting = false;
     float debrisInitialDistance = 1.0f;
-    float debrisInitialVelocity = 40.0f;
+    float debrisInitialVelocity = 90.0f;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -36,14 +36,14 @@ public class Destruction : MonoBehaviour
         // TODO: Spawn debris 
         if (!isQuitting)
         {
+            Vector2 satSpeed = gameObject.GetComponent<Rigidbody2D>().velocity;
             for (int i = 0; i < numberOfDebris; i++)
             {
                 GameObject debris = Instantiate(debrisObject);
-                Vector2 randomVector = Random.onUnitSphere;
-                randomVector = randomVector.normalized;
-                debris.GetComponent<Rigidbody2D>().mass = Random.value;
+                Vector2 randomVector = Random.insideUnitCircle;
+                debris.GetComponent<Rigidbody2D>().mass = Random.Range(0.1f,0.7f);
                 debris.transform.position = transform.position + (Vector3)randomVector*debrisInitialDistance;
-                debris.GetComponent<Rigidbody2D>().AddForce(gameObject.GetComponent<Rigidbody2D>().velocity + randomVector*debrisInitialVelocity);
+                debris.GetComponent<Rigidbody2D>().AddForce(randomVector*debrisInitialVelocity);
             }
         }
     }
