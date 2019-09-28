@@ -4,32 +4,38 @@ using UnityEngine;
 
 public class OrbitalPhysics : MonoBehaviour
 {
-    public float maxGravDist = 4.0f;
-    public float maxGravity = 35.0f;
-
+    // Gravity behavior between bodies is completely dependent on body mass
+    // There's no distance limit to gravity / it does not increase or decrease over distance
     // Initialize an array of GameObjects to be the planets 
-    GameObject[] primaryBodies;
+    GameObject[] gravityBodies;
+    GameObject planet;
     Rigidbody2D rb;
 
     void Start()
     {
-        // Populate the array of planets  
-        primaryBodies = GameObject.FindGameObjectsWithTag("Planet");
+        // Populate the array of planets, satellites, and debris
+        gravityBodies = GameObject.FindGameObjectsWithTag("Gravity");
         rb = GetComponent<Rigidbody2D>();
+        planet = GameObject.Find("Planet");
     }
 
     // Update is called once per frame
     void Update()
     {
-        foreach (GameObject primaryBody in primaryBodies)
+        // Handles gravity between this body and all other bodies
+        foreach (GameObject gravityBody in gravityBodies)
         {
-            float distance = Vector2.Distance(primaryBody.transform.position, gameObject.transform.position);
-            if (distance <= maxGravDist)
-            {
-                Vector2 orbitalToPrimary = primaryBody.transform.position - gameObject.transform.position;
-                rb.AddForce(orbitalToPrimary.normalized * (1.0f - distance / maxGravDist) * maxGravity);
-            }
+            float targetMass = gravityBody.GetComponent<Rigidbody2D>().mass;
+            Vector2 gravityToGravity = gravityBody.transform.position - gameObject.transform.position;
+            rb.AddForce(gravityToGravity.normalized * targetMass);
         }
+
+        // Handles Drag 
+//        Vector2 planetDistance = planet.transform.position - gameObject.transform.position;
+//        float drag = 1 / planetDistance.magnitude;
+//        rb.velocity *= drag;
+
+
     }
 
 
