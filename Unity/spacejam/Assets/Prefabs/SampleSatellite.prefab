@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 792452148}
   - component: {fileID: 792452149}
   - component: {fileID: 792452153}
+  - component: {fileID: 8628799123640739574}
   m_Layer: 0
   m_Name: SampleSatellite
   m_TagString: Untagged
@@ -132,3 +133,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxGravDist: 4
   maxGravity: 35
+--- !u!114 &8628799123640739574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118931987274382205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a5687bed218c34fabd121437da32d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
