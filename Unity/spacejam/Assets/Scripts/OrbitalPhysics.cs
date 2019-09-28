@@ -16,12 +16,19 @@ public class OrbitalPhysics : MonoBehaviour
         // Populate the array of planets, satellites, and debris
         gravityBodies = GameObject.FindGameObjectsWithTag("Gravity");
         rb = GetComponent<Rigidbody2D>();
-        planet = GameObject.Find("Planet");
     }
 
     // Update is called once per frame
     void Update()
     {
+        planet = GameObject.Find("Planet");
+        // Need to handle drag. This is once per update. Gravity is the loop below.
+        float planetDistance = (planet.transform.position - gameObject.transform.position).magnitude;
+        double Cd = 0.1; //Should be possible to set per company / satellite
+        double drag = (Cd * (1 / planetDistance) * rb.velocity.magnitude);
+
+        rb.drag = (float)drag;
+
         // Handles gravity between this body and all other bodies
         foreach (GameObject gravityBody in gravityBodies)
         {
@@ -29,12 +36,6 @@ public class OrbitalPhysics : MonoBehaviour
             Vector2 gravityToGravity = gravityBody.transform.position - gameObject.transform.position;
             rb.AddForce(gravityToGravity.normalized * targetMass);
         }
-
-        // Handles Drag 
-//        Vector2 planetDistance = planet.transform.position - gameObject.transform.position;
-//        float drag = 1 / planetDistance.magnitude;
-//        rb.velocity *= drag;
-
 
     }
 
