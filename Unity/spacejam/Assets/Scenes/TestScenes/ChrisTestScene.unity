@@ -133,6 +133,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1955312062}
     m_Modifications:
+    - target: {fileID: 7919815633699487190, guid: 0236a4022b2a245c68f1bc92a2bada61,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919815633699487190, guid: 0236a4022b2a245c68f1bc92a2bada61,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8738022027171867253, guid: 0236a4022b2a245c68f1bc92a2bada61,
         type: 3}
       propertyPath: m_Name
