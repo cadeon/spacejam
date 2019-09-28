@@ -1,15 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cursor : MonoBehaviour
+public class Launcher : MonoBehaviour
 {
 	public float speed = 50f;
 	private float prevX;
 	private float prevY;
-
-	public Transform mid;
-
 
 	void Update() 
 	{
@@ -24,15 +21,7 @@ public class Cursor : MonoBehaviour
 		Vector2 v = new Vector2(x, y);
 
 		transform.position = v;
-	
-    	//Debug.DrawRay (transform.position, mid.position, Color.green);
 
 	}
-	
-	// void OnDrawGizmos()
-	// {
-	// 	Gizmos.color = Color.blue;
-	// 	Gizmos.DrawLine (transform.position, mid.position);
-	// }
 
 }
