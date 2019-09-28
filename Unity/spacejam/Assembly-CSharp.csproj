@@ -62,7 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\TestFolder\Emilio.cs" />
+    <Compile Include="Assets\Scripts\OrbitalPhysics.cs" />
+    <Compile Include="Assets\Test\Emilio.cs" />
+    <Compile Include="Assets\Test\Emilio\ClickToPlace.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Emilio/Documents/GitHub/spacejam/Unity/spacejam/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
