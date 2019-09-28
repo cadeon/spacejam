@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Destruction.cs" />
     <Compile Include="Assets\Scripts\GUIFollowObject.cs" />
     <Compile Include="Assets\Scripts\OrbitalPhysics.cs" />
+    <Compile Include="Assets\Scripts\SpinStations.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Emilio/Documents/GitHub/spacejam/Unity/spacejam/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
