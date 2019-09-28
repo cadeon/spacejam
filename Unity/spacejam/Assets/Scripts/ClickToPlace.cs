@@ -34,7 +34,7 @@ public class ClickToPlace : MonoBehaviour
 
         if (launching) 
         {
-            launchPower += 100 * Time.deltaTime;
+            launchPower += 250 * Time.deltaTime;
         }
         else if (launchPower > 0f) 
         {
