@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5805307313042211739}
   m_Layer: 0
   m_Name: SamplePlanet
-  m_TagString: Planet
+  m_TagString: Gravity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
