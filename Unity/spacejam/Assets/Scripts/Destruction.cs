@@ -5,6 +5,11 @@ using UnityEngine;
 public class Destruction : MonoBehaviour
 {
     public int health = 1;
+    public GameObject debrisObject;
+    public int numberOfDebris;
+    bool isQuitting = false;
+    float debrisInitialDistance = 1.0f;
+    float debrisInitialVelocity = 90.0f;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -18,8 +23,29 @@ public class Destruction : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            // TODO: Spawn debris 
         }
     }
-    
+
+    void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
+    private void OnDestroy()
+    {
+        // TODO: Spawn debris 
+        if (!isQuitting)
+        {
+            Vector2 satSpeed = gameObject.GetComponent<Rigidbody2D>().velocity;
+            for (int i = 0; i < numberOfDebris; i++)
+            {
+                GameObject debris = Instantiate(debrisObject);
+                Vector2 randomVector = Random.insideUnitCircle;
+                debris.GetComponent<Rigidbody2D>().mass = Random.Range(0.1f,0.7f);
+                debris.transform.position = transform.position + (Vector3)randomVector*debrisInitialDistance;
+                debris.GetComponent<Rigidbody2D>().AddForce(randomVector*debrisInitialVelocity);
+            }
+        }
+    }
+
 }
