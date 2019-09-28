@@ -63,8 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CameraControls.cs" />
+    <Compile Include="Assets\Scripts\ClickToPlace.cs" />
     <Compile Include="Assets\Scripts\OrbitalPhysics.cs" />
-    <Compile Include="Assets\Test\Emilio\ClickToPlace.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/caduffy/git/spacejam/Unity/spacejam/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
