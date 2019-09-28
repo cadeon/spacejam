@@ -196,7 +196,7 @@ PrefabInstance:
     - target: {fileID: 8053631651710178529, guid: ddcc315124f4b0f49ae59cf3d9531549,
         type: 3}
       propertyPath: m_Name
-      value: SamplePlanet
+      value: Planet
       objectReference: {fileID: 0}
     - target: {fileID: 8053631651710178525, guid: ddcc315124f4b0f49ae59cf3d9531549,
         type: 3}
