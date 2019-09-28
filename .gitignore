@@ -2,6 +2,8 @@
 # =============== #
 # Unity generated #
 # =============== #
+*.meta
+Unity/spacejam/Temp/
 Unity/spacejam/Library/
 Unity/spacejam/obj/
 /[Ll]ibrary/
