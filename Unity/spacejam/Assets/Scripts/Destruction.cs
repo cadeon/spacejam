@@ -18,8 +18,12 @@ public class Destruction : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            // TODO: Spawn debris 
         }
     }
-    
+
+    private void OnDestroy()
+    {
+        // TODO: Spawn debris 
+    }
+
 }

@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\CameraControls.cs" />
     <Compile Include="Assets\Scripts\ClickToPlace.cs" />
     <Compile Include="Assets\Scripts\Destruction.cs" />
+    <Compile Include="Assets\Scripts\GUIFollowObject.cs" />
     <Compile Include="Assets\Scripts\OrbitalPhysics.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Emilio/Documents/GitHub/spacejam/Unity/spacejam/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
