@@ -1,11 +1,11 @@
 # =============== #
 # Unity generated #
 # =============== #
-Unity/spacejam/[Tt]emp/
-Unity/spacejam/[Oo]bj/
+Unity/spacejam/[Tt]emp/*
+Unity/spacejam/[Oo]bj/*
 Unity/spacejam/[Bb]uild
-Unity/spacejam/[Bb]uilds/
-Unity/spacejam/[Ll]ibrary/
+Unity/spacejam/[Bb]uilds/*
+Unity/spacejam/[Ll]ibrary/*
 Unity/spacejam/sysinfo.txt
 Unity/spacejam/*.stackdump
 Unity/spacejam/Assets/AssetStoreTools*
