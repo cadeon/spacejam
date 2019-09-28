@@ -4,32 +4,39 @@ using UnityEngine;
 
 public class OrbitalPhysics : MonoBehaviour
 {
-    public float maxGravDist = 4.0f;
-    public float maxGravity = 35.0f;
-
+    // Gravity behavior between bodies is completely dependent on body mass
+    // There's no distance limit to gravity / it does not increase or decrease over distance
     // Initialize an array of GameObjects to be the planets 
-    GameObject[] primaryBodies;
+    GameObject[] gravityBodies;
+    GameObject planet;
     Rigidbody2D rb;
 
     void Start()
     {
-        // Populate the array of planets  
-        primaryBodies = GameObject.FindGameObjectsWithTag("Planet");
+        // Populate the array of planets, satellites, and debris
+        gravityBodies = GameObject.FindGameObjectsWithTag("Gravity");
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        foreach (GameObject primaryBody in primaryBodies)
+        planet = GameObject.Find("Planet");
+        // Need to handle drag. This is once per update. Gravity is the loop below.
+        float planetDistance = (planet.transform.position - gameObject.transform.position).magnitude;
+        double Cd = 0.1; //Should be possible to set per company / satellite
+        double drag = (Cd * (1 / planetDistance) * rb.velocity.magnitude);
+
+        rb.drag = (float)drag;
+
+        // Handles gravity between this body and all other bodies
+        foreach (GameObject gravityBody in gravityBodies)
         {
-            float distance = Vector2.Distance(primaryBody.transform.position, gameObject.transform.position);
-            if (distance <= maxGravDist)
-            {
-                Vector2 orbitalToPrimary = primaryBody.transform.position - gameObject.transform.position;
-                rb.AddForce(orbitalToPrimary.normalized * (1.0f - distance / maxGravDist) * maxGravity);
-            }
+            float targetMass = gravityBody.GetComponent<Rigidbody2D>().mass;
+            Vector2 gravityToGravity = gravityBody.transform.position - gameObject.transform.position;
+            rb.AddForce(gravityToGravity.normalized * targetMass);
         }
+
     }
 
 
