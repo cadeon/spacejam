@@ -23,6 +23,9 @@ public class GUIFollowObject : MonoBehaviour
 
     private void OnDestroy()
     {
-        Destroy(textLabel.gameObject);
+        if (textLabel)
+        {
+            Destroy(textLabel.gameObject);
+        }
     }
 }
