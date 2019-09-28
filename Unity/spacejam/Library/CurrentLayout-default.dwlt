@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,6 +42,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1440
     height: 850
   m_MinSize: {x: 683, y: 494}
@@ -51,6 +52,14 @@ MonoBehaviour:
   controlID: 96
 =======
   controlID: 122
+>>>>>>> origin/master
+=======
+    width: 1366
+    height: 636
+  m_MinSize: {x: 681, y: 494}
+  m_MaxSize: {x: 14002, y: 14044}
+  vertical: 0
+  controlID: 56
 >>>>>>> origin/master
 --- !u!114 &3
 MonoBehaviour:
@@ -110,8 +119,13 @@ MonoBehaviour:
 =======
     width: 268
     height: 364
+<<<<<<< HEAD
   m_MinSize: {x: 202, y: 222}
   m_MaxSize: {x: 4002, y: 4022}
+>>>>>>> origin/master
+=======
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
 >>>>>>> origin/master
   m_ActualView: {fileID: 15}
   m_Panes:
@@ -385,17 +399,18 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/caduffy/git/spacejam/Unity/spacejam
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_SelectedIDs: b02d0000
     m_LastClickedID: 11696
@@ -404,6 +419,11 @@ MonoBehaviour:
     m_SelectedIDs: c02d0000
     m_LastClickedID: 11712
     m_ExpandedIDs: 00000000482d0000642e0000ee30000000ca9a3b
+>>>>>>> origin/master
+=======
+    m_SelectedIDs: 522e0000
+    m_LastClickedID: 11858
+    m_ExpandedIDs: 000000003a2d0000562e0000e030000000ca9a3b
 >>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -433,9 +453,13 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000382d0000562e0000e2300000
 =======
     m_ExpandedIDs: 00000000482d0000642e0000ee300000
+>>>>>>> origin/master
+=======
+    m_ExpandedIDs: 000000003a2d0000562e0000e0300000
 >>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -565,12 +589,18 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
 <<<<<<< HEAD
       m_ExpandedIDs: 6cf5ffff6afbffff
 =======
       m_ExpandedIDs: 08f8ffff78f9ffffa8faffff56fbffffaa310000
+>>>>>>> origin/master
+=======
+      m_SelectedIDs: 1c340000
+      m_LastClickedID: 13340
+      m_ExpandedIDs: 32eaffff
 >>>>>>> origin/master
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -631,19 +661,23 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 14eb3774faf86614c8a7d4b18dc857a6
   m_Gizmos: 1
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.3141333, y: 0.33375043, z: -2.8327374}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Value: {x: 0.062514484, y: -0.017844174, z: -2.5876844}
 =======
     m_Value: {x: 0.3141333, y: 0.33375043, z: -2.8327374}
+>>>>>>> origin/master
+=======
+    m_Value: {x: 1.6267134, y: -0.3687518, z: -5.1419287}
 >>>>>>> origin/master
   m_RenderMode: 0
   m_CameraMode:
@@ -655,7 +689,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -677,12 +711,16 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 20.967455
+    m_Target: 2.8578837
     speed: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Value: 11.770229
 =======
     m_Value: 20.967455
+>>>>>>> origin/master
+=======
+    m_Value: 15.336276
 >>>>>>> origin/master
   m_Ortho:
     m_Target: 1
