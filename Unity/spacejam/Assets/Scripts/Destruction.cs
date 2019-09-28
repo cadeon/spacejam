@@ -41,6 +41,7 @@ public class Destruction : MonoBehaviour
                 GameObject debris = Instantiate(debrisObject);
                 Vector2 randomVector = Random.onUnitSphere;
                 randomVector = randomVector.normalized;
+                debris.GetComponent<Rigidbody2D>().mass = Random.value;
                 debris.transform.position = transform.position + (Vector3)randomVector*debrisInitialDistance;
                 debris.GetComponent<Rigidbody2D>().AddForce(gameObject.GetComponent<Rigidbody2D>().velocity + randomVector*debrisInitialVelocity);
             }
