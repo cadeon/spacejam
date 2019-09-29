@@ -24,7 +24,8 @@ public class PlayerControlScript : MonoBehaviour
     void Update()
     {
         
-        // Switch Satellites 
+        // Switch Satellites (Feature Removed)
+        /*
         if (Input.GetButtonDown(controllerNumber + "P Select Satellite"))
         {
             if (selected < satellites.Length - 1)
@@ -32,7 +33,7 @@ public class PlayerControlScript : MonoBehaviour
             else
                 selected = 0;
             //Debug.Log("Selected Satellite: " + selected);
-        }
+        }*/
 
         // Hold to charge & launch
         if (Input.GetButton(controllerNumber + "P Launch Satellite"))
