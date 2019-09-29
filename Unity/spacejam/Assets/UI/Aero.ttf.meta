@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 6c863c6ffa580bc458b05c2dae1e2b85
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Aero
+  fontNames:
+  - Aero
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3d46a74c7bebfd14f9452cf202df9ef4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
