@@ -105,14 +105,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 8738022027171867253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48146b125415c404a960abae397a6bcd, type: 3}
+  m_Script: {fileID: 11500000, guid: 8182d7f3ad5a4134c9e853a86fedce8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerNumber: 0
   satellites: []
   selected: 0
   launchPower: 0
   frontEnd: {fileID: 225304852620334881}
   backEnd: {fileID: 1592748381679627953}
+  team: 0
+  teamsMngr: {fileID: 0}
 --- !u!1001 &1685463383
 PrefabInstance:
   m_ObjectHideFlags: 0
