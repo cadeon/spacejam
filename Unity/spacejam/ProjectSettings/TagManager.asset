@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Planet
+  - SpaceStation
+  - Gravity
+  - New tag
+  - TeamsManager
   layers:
   - Default
   - TransparentFX
