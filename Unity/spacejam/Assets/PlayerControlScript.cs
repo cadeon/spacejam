@@ -11,6 +11,8 @@ public class PlayerControlScript : MonoBehaviour
     public float launchPower;
     public Transform frontEnd;
     public Transform backEnd;
+    List<GameObject> mySatellites = new List<GameObject>(); // An array to store ALL satellites launched by this player. Will be useful for scoring. 
+                                                            // Destroyed satelites will be NULL, so take this into account when scoring. 
 
     // Update is called once per frame
     void Update()
@@ -22,7 +24,7 @@ public class PlayerControlScript : MonoBehaviour
                 selected++;
             else
                 selected = 0;
-            Debug.Log("Selected Satellite: " + selected);
+            //Debug.Log("Selected Satellite: " + selected);
         }
 
         // Hold to charge & launch
@@ -35,7 +37,7 @@ public class PlayerControlScript : MonoBehaviour
             spawnedObject = Instantiate(satellites[selected], transform.position, Quaternion.identity);
             spawnedObject.GetComponent<Rigidbody2D>().AddForce((transform.position - backEnd.position) * launchPower);
             launchPower = 0.0f;
+            mySatellites.Add(spawnedObject);    // Add satellite to list
         }
-
     }
 }
