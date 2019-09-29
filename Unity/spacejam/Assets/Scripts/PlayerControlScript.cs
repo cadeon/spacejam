@@ -49,5 +49,10 @@ public class PlayerControlScript : MonoBehaviour
             }
             launchPower = 0.0f;
         }
+
+            /*
+            * "Everything's gonna work now, it's all gonna be amazing"
+            *       - Chris
+            */
     }
 }
