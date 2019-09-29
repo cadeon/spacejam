@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9d5d3158fce7843bfb8002865cad866f
+guid: 6c863c6ffa580bc458b05c2dae1e2b85
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   fontName: Aero
   fontNames:
   - Aero
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3d46a74c7bebfd14f9452cf202df9ef4, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
