@@ -6,7 +6,6 @@ public class HealthBar : MonoBehaviour
 {
     public Transform bar;
 
-
     // Start is called before the first frame update
     private void Start()
     {
@@ -16,5 +15,5 @@ public class HealthBar : MonoBehaviour
     public void SetSize (float sizeNormalized)
     {
         bar.localScale = new Vector3(sizeNormalized, 1f);
-    }
+     }
 }
