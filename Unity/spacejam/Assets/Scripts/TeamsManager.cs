@@ -64,7 +64,6 @@ public class TeamsManager : MonoBehaviour
 
     public void AddSat(Team team, GameObject sat)
 	{
-        Debug.Log("Addsa");
 		switch(team) 
 		{
 			case Team.TEAM1:
