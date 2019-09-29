@@ -37,7 +37,7 @@ public class PlayerControlScript : MonoBehaviour
         // Hold to charge & launch
         if (Input.GetButton(controllerNumber + "P Launch Satellite"))
         {
-            launchPower = Mathf.Clamp(launchPower + Time.deltaTime * launchChargeModifier, 0.0f, launchChargeModifier * 2);
+            launchPower = Mathf.Clamp(launchPower + Time.deltaTime * launchChargeModifier, 0.0f, launchChargeCap);
         }
         else if(launchPower > 0.0f)
         {
