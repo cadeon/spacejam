@@ -12,9 +12,9 @@ public class PlayerControlScript : MonoBehaviour
     public GameObject[] satellites;
     public int selected = 0;
     //public GameObject objectToSpawn;
-    float launchChargeModifier = 400.0f;   // A multiplier for the charge time. 250.0 is default, but can be changed. 
-    float launchChargeCap = 800.0f;   // The max charge 
-    float launchChargeMinimum = 100.0f;   // The minimum charge to fire a satellite
+    float launchChargeModifier = 1200.0f;   // A multiplier for the charge time. 250.0 is default, but can be changed. 
+    float launchChargeCap = 2400.0f;   // The max charge 
+    float launchChargeMinimum = 300.0f;   // The minimum charge to fire a satellite
     GameObject spawnedObject;
     public float launchPower;
     public Transform frontEnd;
