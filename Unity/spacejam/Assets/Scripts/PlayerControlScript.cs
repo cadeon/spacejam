@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControlScript : MonoBehaviour
 {
@@ -43,6 +44,13 @@ public class PlayerControlScript : MonoBehaviour
                 selected = 0;
             //Debug.Log("Selected Satellite: " + selected);
         }*/
+
+        //restart game
+        if(Input.GetButton("Restart"))
+        {
+            Debug.Log("Restarting...");
+            SceneManager.LoadScene( SceneManager.GetActiveScene().name );
+        }
 
         // Hold to charge & launch
         if (Input.GetButton(controllerNumber + "P Launch Satellite"))
