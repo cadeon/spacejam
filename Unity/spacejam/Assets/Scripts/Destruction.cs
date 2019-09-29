@@ -16,7 +16,9 @@ public class Destruction : MonoBehaviour
     {
         // TODO: Add code that insta-destroys the satellite if it touches a planet. Perhaps relating to the object's mass and/or velocity. 
         TakeDamage(1);
+
         // Play a sound?
+        destroySound.enabled = true;
         destroySound.Play();
     }
 
