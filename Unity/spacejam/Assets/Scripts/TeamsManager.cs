@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Team { TEAM1, TEAM2, TEAM3, TEAM4 };		
+public enum Team { TEAM1, TEAM2, TEAM3, TEAM4 };
 
 public class TeamsManager : MonoBehaviour
 {
+    public int p1Score = 0;
+    public int p2Score = 0;
+    public int p3Score = 0;
+    public int p4Score = 0;
 
-	public List<GameObject> team1;
+
+    public List<GameObject> team1;
 	public List<GameObject> team2;
 	public List<GameObject> team3;
 	public List<GameObject> team4;
@@ -29,9 +34,37 @@ public class TeamsManager : MonoBehaviour
 		team4Enemies = new List<GameObject>();
 	}
 
-	public void AddSat(Team team, GameObject sat)
-	{	
+    private void Update()
+    {
+        for (var i = team1.Count - 1; i > -1; i--)
+        {
+            if (team1[i] == null)
+                team1.RemoveAt(i);
+        }
+        for (var i = team2.Count - 1; i > -1; i--)
+        {
+            if (team2[i] == null)
+                team2.RemoveAt(i);
+        }
+        for (var i = team3.Count - 1; i > -1; i--)
+        {
+            if (team3[i] == null)
+                team3.RemoveAt(i);
+        }
+        for (var i = team4.Count - 1; i > -1; i--)
+        {
+            if (team4[i] == null)
+                team4.RemoveAt(i);
+        }
+        p1Score = team1.Count;
+        p2Score = team2.Count;
+        p3Score = team3.Count;
+        p4Score = team4.Count;
+    }
 
+    public void AddSat(Team team, GameObject sat)
+	{
+        Debug.Log("Addsa");
 		switch(team) 
 		{
 			case Team.TEAM1:

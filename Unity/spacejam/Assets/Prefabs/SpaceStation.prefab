@@ -71,6 +71,8 @@ MonoBehaviour:
   launchPower: 0
   frontEnd: {fileID: 225304852620334881}
   backEnd: {fileID: 1592748381679627953}
+  team: 0
+  teamsMngr: {fileID: 0}
 --- !u!212 &1076469574829519657
 SpriteRenderer:
   m_ObjectHideFlags: 0
