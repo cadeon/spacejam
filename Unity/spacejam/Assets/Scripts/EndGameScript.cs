@@ -21,9 +21,21 @@ public class EndGameScript : MonoBehaviour
                 highestScore = scores[i];
                 winningTeam = i+1;
             }
+            else if (scores[i] == highestScore)
+            {
+                winningTeam = 0;
+            }
         }
         
-        Debug.Log("Player " + winningTeam + " wins!" );
-        winnerTextBox.GetComponent<Text>().text = "PLAYER " + winningTeam + " WINS!";
+        if (winningTeam == 0)
+        {
+            Debug.Log("Tie Game!");
+            winnerTextBox.GetComponent<Text>().text = "TIE GAME!";
+        }
+        else
+        {
+            Debug.Log("Player " + winningTeam + " wins!");
+            winnerTextBox.GetComponent<Text>().text = "PLAYER " + winningTeam + " WINS!";
+        }
     }
 }
