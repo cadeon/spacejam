@@ -9,6 +9,7 @@ TagManager:
   - Gravity
   - New tag
   - TeamsManager
+  - BoomBox
   layers:
   - Default
   - TransparentFX
