@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8021886884579574283}
   - component: {fileID: 7397052118889518765}
   m_Layer: 0
-  m_Name: SampleSatellite
+  m_Name: Sat_P3
   m_TagString: Gravity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,7 +349,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 929716483931b415ea7bc23bc96662b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7910baacba85a4e5d8ce2694bd4e54b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
