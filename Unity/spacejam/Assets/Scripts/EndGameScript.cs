@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class EndGameScript : MonoBehaviour
 {
     public TeamsManager teamMgr;
+    public Text winnerTextBox;
     // Start is called before the first frame update
     public void GameOver()
     {
@@ -21,6 +23,7 @@ public class EndGameScript : MonoBehaviour
             }
         }
         
-        Debug.Log("Team " + winningTeam + " wins!" );
+        Debug.Log("Player " + winningTeam + " wins!" );
+        winnerTextBox.GetComponent<Text>().text = "PLAYER " + winningTeam + " WINS!";
     }
 }
