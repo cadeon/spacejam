@@ -21,7 +21,7 @@ public class ClickToPlace : MonoBehaviour
     {
         float rightTrigger = Input.GetAxis("RightTrigger");
 
-        Debug.Log(rightTrigger);
+        //Debug.Log(rightTrigger);
 
         if (rightTrigger != 0)
         {

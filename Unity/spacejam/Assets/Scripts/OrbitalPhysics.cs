@@ -32,9 +32,13 @@ public class OrbitalPhysics : MonoBehaviour
         // Handles gravity between this body and all other bodies
         foreach (GameObject gravityBody in gravityBodies)
         {
-            float targetMass = gravityBody.GetComponent<Rigidbody2D>().mass;
-            Vector2 gravityToGravity = gravityBody.transform.position - gameObject.transform.position;
-            rb.AddForce(gravityToGravity.normalized * targetMass);
+
+            if (gravityBody)
+            {
+                float targetMass = gravityBody.GetComponent<Rigidbody2D>().mass;
+                Vector2 gravityToGravity = gravityBody.transform.position - gameObject.transform.position;
+                rb.AddForce(gravityToGravity.normalized * targetMass);
+            }
         }
 
     }
