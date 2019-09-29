@@ -157,7 +157,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 50
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5329869509646980824}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2db67fa24c835684c9f0937b474652e7, type: 3}
   m_Name: 
@@ -230,6 +230,9 @@ MonoBehaviour:
   objectToSpawn: {fileID: 118931987274382205, guid: 7223973e2e6cf8645b4a32d9bcc01bfe,
     type: 3}
   launchForceScale: 60
+  launchPower: 0
+  frontEnd: {fileID: 0}
+  backEnd: {fileID: 0}
 --- !u!114 &1274579985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,4 +245,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3124f3057052924ba2ff412e1ac0d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxZoomOut: 30
+  minZoom: 1
+  maxZoom: 40
