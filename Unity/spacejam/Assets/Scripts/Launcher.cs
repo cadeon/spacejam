@@ -9,11 +9,19 @@ public class Launcher : MonoBehaviour
     private float prevX;
 	private float prevY;
 
-	void Update() 
+    float smooth = 5.0f;
+    float tiltAngle = 60.0f;
+
+    void Update() 
 	{
-		// aiming via the controller stick
-		float x = Input.GetAxis(controllerNumber + "P Horizontal") * speed * Time.deltaTime;
-		float y = Input.GetAxis(controllerNumber + "P Vertical") * speed * Time.deltaTime;
+        float xaxis = Input.GetAxis(controllerNumber + "P Horizontal");
+        float yaxis = Input.GetAxis(controllerNumber + "P Vertical");
+
+        float arrowangle = Mathf.Atan2(xaxis, -yaxis) * Mathf.Rad2Deg;
+
+        // aiming via the controller stick
+        float x = xaxis * speed * Time.deltaTime;
+		float y = yaxis * speed * Time.deltaTime;
 
 		// update position with station position
 		x += transform.parent.position.x;
@@ -21,8 +29,30 @@ public class Launcher : MonoBehaviour
 
 		Vector2 v = new Vector2(x, y);
 
-		transform.position = v;
+        // update rotation
 
-	}
+        // Rotate by converting the angles into a quaternion.
+        Quaternion target = Quaternion.Euler(0, 0, arrowangle);
+
+        transform.position = v;
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, 100);
+
+        if (controllerNumber == 4)
+        {
+            Debug.Log("X : " + xaxis);
+            Debug.Log("Y : " + yaxis);
+        }
+
+        if (xaxis == 0f && yaxis == 0f)
+        {
+            transform.localScale = new Vector3(0f, 0f, 0f);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+
+
+    }
 
 }
