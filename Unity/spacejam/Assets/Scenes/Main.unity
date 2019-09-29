@@ -199,11 +199,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4543690774863792642, guid: 0236a4022b2a245c68f1bc92a2bada61,
-        type: 3}
-      propertyPath: displayName
-      value: Player 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -217,6 +212,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118931987274382205, guid: 8613b49a75fa1154ab6a2a39ec738a76,
         type: 3}
+    - target: {fileID: 4543690774863792642, guid: 0236a4022b2a245c68f1bc92a2bada61,
+        type: 3}
+      propertyPath: displayName
+      value: Player 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1592748381679627952, guid: 0236a4022b2a245c68f1bc92a2bada61,
         type: 3}
       propertyPath: controllerNumber
@@ -632,11 +632,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4543690774863792642, guid: 0236a4022b2a245c68f1bc92a2bada61,
-        type: 3}
-      propertyPath: displayName
-      value: Player 4
-      objectReference: {fileID: 0}
     - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -650,6 +645,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118931987274382205, guid: 14fec1b26639bc943aa2994910f2bb25,
         type: 3}
+    - target: {fileID: 4543690774863792642, guid: 0236a4022b2a245c68f1bc92a2bada61,
+        type: 3}
+      propertyPath: displayName
+      value: Player 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1592748381679627952, guid: 0236a4022b2a245c68f1bc92a2bada61,
         type: 3}
       propertyPath: controllerNumber
@@ -892,6 +892,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807359031}
   m_CullTransparentMesh: 0
+--- !u!1 &917480204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5329869509646980824, guid: c4ee6a66eab219c449ef12ae44d4e8b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 780879234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &917480205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917480204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60097e9b074e50e4298daf453a215565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team1: []
+  team2: []
+  team3: []
+  team4: []
+  team1Enemies: []
+  team2Enemies: []
+  team3Enemies: []
+  team4Enemies: []
 --- !u!4 &920552735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1807117796175021172, guid: 0236a4022b2a245c68f1bc92a2bada61,
@@ -1159,11 +1185,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4543690774863792642, guid: 0236a4022b2a245c68f1bc92a2bada61,
-        type: 3}
-      propertyPath: displayName
-      value: Player 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1177,6 +1198,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118931987274382205, guid: f804700c0cd0e71468d92b51a7f57cfe,
         type: 3}
+    - target: {fileID: 4543690774863792642, guid: 0236a4022b2a245c68f1bc92a2bada61,
+        type: 3}
+      propertyPath: displayName
+      value: Player 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1592748381679627952, guid: 0236a4022b2a245c68f1bc92a2bada61,
         type: 3}
       propertyPath: controllerNumber
@@ -1262,11 +1288,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4543690774863792642, guid: 0236a4022b2a245c68f1bc92a2bada61,
-        type: 3}
-      propertyPath: displayName
-      value: Player 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
       propertyPath: controllerNumber
       value: 1
@@ -1276,6 +1297,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118931987274382205, guid: 44b406926331ecd44a3119d7199ad74b,
         type: 3}
+    - target: {fileID: 4543690774863792642, guid: 0236a4022b2a245c68f1bc92a2bada61,
+        type: 3}
+      propertyPath: displayName
+      value: Player 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1592748381679627952, guid: 0236a4022b2a245c68f1bc92a2bada61,
         type: 3}
       propertyPath: m_Enabled
