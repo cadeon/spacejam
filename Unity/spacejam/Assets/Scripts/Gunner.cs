@@ -15,6 +15,8 @@ public class Gunner : MonoBehaviour
 
 	private float timeToFire;
 
+	public TeamsManager teamsMngr;
+
 	void Start()
 	{
 		timeToFire = fireRate;
@@ -51,8 +53,25 @@ public class Gunner : MonoBehaviour
 		return v;
 	}
 
+	// need to select target from teams manager, because tags are unavailable and names are unreliable
 	private Transform SelectTarget()
 	{
+		foreach(GameObject entity in teamsMngr.team1)
+		{
+			if(entity == null)
+				continue;
+
+			if(target == null)
+			{
+				target = entity.transform;
+				continue;
+			}
+			else if(entity.transform.position.magnitude < target.position.magnitude)
+			{
+				target = entity.transform;
+			}
+		}
+
 		return target;
 	}
 

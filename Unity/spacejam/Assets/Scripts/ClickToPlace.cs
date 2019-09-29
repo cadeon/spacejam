@@ -16,6 +16,8 @@ public class ClickToPlace : MonoBehaviour
     public Transform frontEnd;
     public Transform backEnd;
 
+    public TeamsManager teamsMngr;
+
     // Update is called once per frame
     void Update()
     {
@@ -40,6 +42,30 @@ public class ClickToPlace : MonoBehaviour
         {
             spawnedObject = Instantiate(objectToSpawn, frontEnd.position, Quaternion.identity);
             spawnedObject.GetComponent<Rigidbody2D>().AddForce((frontEnd.position - backEnd.position) * launchPower);
+
+            // if spawned a satellite, add to set for that team (for targeting)
+            Satellite sat = spawnedObject.GetComponent<Satellite>();
+            if(sat != null)
+            {
+                switch (sat.team)
+                {
+                    case Team.TEAM1:
+                        teamsMngr.AddSat(1, spawnedObject);
+                        break;
+                
+                    case Team.TEAM2:
+                        teamsMngr.AddSat(2, spawnedObject);
+                        break;
+
+                    case Team.TEAM3:
+                        teamsMngr.AddSat(3, spawnedObject);
+                        break;
+
+                    case Team.TEAM4:
+                        teamsMngr.AddSat(4, spawnedObject);
+                        break;
+                }
+            }
 
             launchPower = 0f;
         }
