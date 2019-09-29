@@ -369,6 +369,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &251360501 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1592748381679627953, guid: 0236a4022b2a245c68f1bc92a2bada61,
+    type: 3}
+  m_PrefabInstance: {fileID: 1674647386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &254364926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1592748381679627953, guid: 0236a4022b2a245c68f1bc92a2bada61,
@@ -422,6 +428,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &415432705 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 225304852620334881, guid: 0236a4022b2a245c68f1bc92a2bada61,
+    type: 3}
+  m_PrefabInstance: {fileID: 1678960900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &504426419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1012,8 +1024,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
+      propertyPath: satellites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
       propertyPath: controllerNumber
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
+      propertyPath: selected
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
+      propertyPath: satellites.Array.data[0]
+      value: 
+      objectReference: {fileID: 118931987274382205, guid: 7223973e2e6cf8645b4a32d9bcc01bfe,
+        type: 3}
+    - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
+      propertyPath: frontEnd
+      value: 
+      objectReference: {fileID: 415432705}
+    - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
+      propertyPath: backEnd
+      value: 
+      objectReference: {fileID: 251360501}
+    - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
+      propertyPath: launchPower
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4543690774863792642, guid: 0236a4022b2a245c68f1bc92a2bada61,
         type: 3}
