@@ -10,15 +10,24 @@ public class Destruction : MonoBehaviour
     bool isQuitting = false;
     float debrisInitialDistance = 1.0f;
     float debrisInitialVelocity = 90.0f;
+    BoomBox boombox;
+
+
+    void Start() {
+        boombox = GameObject.FindGameObjectWithTag("BoomBox").GetComponent<BoomBox>();
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         // TODO: Add code that insta-destroys the satellite if it touches a planet. Perhaps relating to the object's mass and/or velocity. 
+
         TakeDamage(1);
     }
 
     void TakeDamage(int damageTaken)
     {
+        Debug.Log("Damaged");
+
         health = health - damageTaken; 
         if (health <= 0)
         {
@@ -36,6 +45,7 @@ public class Destruction : MonoBehaviour
         // TODO: Spawn debris 
         if (!isQuitting)
         {
+            boombox.GoBoom();
             Vector2 satSpeed = gameObject.GetComponent<Rigidbody2D>().velocity;
             for (int i = 0; i < numberOfDebris; i++)
             {
