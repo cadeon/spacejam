@@ -197,6 +197,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
+      propertyPath: controllerNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4543690774863792642, guid: 0236a4022b2a245c68f1bc92a2bada61,
         type: 3}
       propertyPath: displayName
@@ -492,6 +496,10 @@ PrefabInstance:
     - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049574832, guid: 0236a4022b2a245c68f1bc92a2bada61, type: 3}
+      propertyPath: controllerNumber
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4543690774863792642, guid: 0236a4022b2a245c68f1bc92a2bada61,
         type: 3}
