@@ -108,12 +108,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8182d7f3ad5a4134c9e853a86fedce8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aimSpeed: 50
   controllerNumber: 0
-  satellites: []
+  aimX: 0
+  aimY: 0
+  satellites:
+  - {fileID: 118931987274382205, guid: 7223973e2e6cf8645b4a32d9bcc01bfe, type: 3}
   selected: 0
   launchPower: 0
-  frontEnd: {fileID: 0}
-  backEnd: {fileID: 0}
+  frontEnd: {fileID: 225304852620334881}
+  backEnd: {fileID: 1592748381679627953}
 --- !u!1001 &1685463383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,6 +190,18 @@ PrefabInstance:
 --- !u!4 &1592748381208054719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1592748380596611816, guid: 079de8caa817bdb448f09155ecdfc3a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1685463383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1592748381679627953 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1592748380140965862, guid: 079de8caa817bdb448f09155ecdfc3a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1685463383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &225304852620334881 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 225304852155954806, guid: 079de8caa817bdb448f09155ecdfc3a9,
     type: 3}
   m_PrefabInstance: {fileID: 1685463383}
   m_PrefabAsset: {fileID: 0}
