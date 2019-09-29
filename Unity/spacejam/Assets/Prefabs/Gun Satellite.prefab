@@ -1,5 +1,37 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &843496977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2765190496356051932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e198c477fa7cfe64bbd123b3394460b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 1
+  projectile: {fileID: 118931987274382205, guid: fbcbda948839be545b75775d948de1c6,
+    type: 3}
+  target: {fileID: 0}
+  power: 250
+  offset: 0.1
+  teamsMngr: {fileID: 0}
+--- !u!114 &843496978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2765190496356051932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e130a53f1e64549bdc10eaf13a0c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 0
 --- !u!1001 &2880445690792448161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,7 +42,7 @@ PrefabInstance:
     - target: {fileID: 118931987274382205, guid: 7223973e2e6cf8645b4a32d9bcc01bfe,
         type: 3}
       propertyPath: m_Name
-      value: SampleSatellite
+      value: Gun Satellite
       objectReference: {fileID: 0}
     - target: {fileID: 118931987274382177, guid: 7223973e2e6cf8645b4a32d9bcc01bfe,
         type: 3}
@@ -67,5 +99,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 792452153, guid: 7223973e2e6cf8645b4a32d9bcc01bfe, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 617837622931464111, guid: 7223973e2e6cf8645b4a32d9bcc01bfe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7223973e2e6cf8645b4a32d9bcc01bfe, type: 3}
+--- !u!1 &2765190496356051932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 118931987274382205, guid: 7223973e2e6cf8645b4a32d9bcc01bfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2880445690792448161}
+  m_PrefabAsset: {fileID: 0}
