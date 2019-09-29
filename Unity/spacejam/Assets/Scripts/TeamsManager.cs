@@ -71,10 +71,10 @@ public class TeamsManager : MonoBehaviour
 
     void UpdateUI()
     {
-    	p1Text.text = "Player One: " + p1Score;
-    	p2Text.text = "Player Two: " + p2Score;
-    	p3Text.text = "Player Three: " + p3Score;
-    	p4Text.text = "Player Four: " + p4Score;
+    	p1Text.text = "Player 1: " + p1Score;
+    	p2Text.text = "Player 2: " + p2Score;
+    	p3Text.text = "Player 3: " + p3Score;
+    	p4Text.text = "Player 4: " + p4Score;
     }
 
     public void AddSat(Team team, GameObject sat)
