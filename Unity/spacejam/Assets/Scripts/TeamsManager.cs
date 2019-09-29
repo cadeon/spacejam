@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum Team { TEAM1, TEAM2, TEAM3, TEAM4 };
 
@@ -11,6 +12,10 @@ public class TeamsManager : MonoBehaviour
     public int p3Score = 0;
     public int p4Score = 0;
 
+    public Text p1Text;
+    public Text p2Text;
+    public Text p4Text;
+    public Text p3Text;
 
     public List<GameObject> team1;
 	public List<GameObject> team2;
@@ -60,6 +65,16 @@ public class TeamsManager : MonoBehaviour
         p2Score = team2.Count;
         p3Score = team3.Count;
         p4Score = team4.Count;
+
+        UpdateUI();
+    }
+
+    void UpdateUI()
+    {
+    	p1Text.text = "Player One: " + p1Score;
+    	p2Text.text = "Player Two: " + p2Score;
+    	p3Text.text = "Player Three: " + p3Score;
+    	p4Text.text = "Player Four: " + p4Score;
     }
 
     public void AddSat(Team team, GameObject sat)
