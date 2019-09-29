@@ -20,6 +20,8 @@ public class Gunner : MonoBehaviour
 
 	public TeamsManager teamsMngr;
 
+	public bool dontFire = true;
+
 	void Start()
 	{
 		timeToFire = fireRate;
@@ -29,18 +31,22 @@ public class Gunner : MonoBehaviour
 
 	void Update()
 	{
-		// count down, then fire
-		timeToFire -= Time.deltaTime;
-		if(timeToFire <= 0)
+		// mostly used for debugging purposes
+		if(!dontFire)
 		{
-			target = SelectTarget();
-			
-			if(target != null)
+			// count down, then fire
+			timeToFire -= Time.deltaTime;
+			if(timeToFire <= 0)
 			{
-				// aim returns the firing vector
-				Vector2 vec = Aim();
-				Fire(vec);
-				timeToFire = fireRate;
+				target = SelectTarget();
+				
+				if(target != null)
+				{
+					// aim returns the firing vector
+					Vector2 vec = Aim();
+					Fire(vec);
+					timeToFire = fireRate;
+				}
 			}
 		}
 	}

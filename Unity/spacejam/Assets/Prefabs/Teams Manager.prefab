@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6192418780150451806}
   m_Layer: 0
   m_Name: Teams Manager
-  m_TagString: Untagged
+  m_TagString: TeamsManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

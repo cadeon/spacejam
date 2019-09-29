@@ -19,6 +19,7 @@ MonoBehaviour:
   power: 250
   offset: 0.1
   teamsMngr: {fileID: 0}
+  dontFire: 0
 --- !u!114 &843496978
 MonoBehaviour:
   m_ObjectHideFlags: 0

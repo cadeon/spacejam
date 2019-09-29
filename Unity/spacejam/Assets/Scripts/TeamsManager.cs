@@ -17,8 +17,21 @@ public class TeamsManager : MonoBehaviour
 	public List<GameObject> team3Enemies;
 	public List<GameObject> team4Enemies;
 
+	void Start()
+	{
+		team2 = new List<GameObject>();
+		team3 = new List<GameObject>();
+		team1 = new List<GameObject>();
+		team4 = new List<GameObject>();
+		team1Enemies = new List<GameObject>();
+		team2Enemies = new List<GameObject>();
+		team3Enemies = new List<GameObject>();
+		team4Enemies = new List<GameObject>();
+	}
+
 	public void AddSat(Team team, GameObject sat)
 	{	
+
 		switch(team) 
 		{
 			case Team.TEAM1:
