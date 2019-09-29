@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerControlScript : MonoBehaviour
 {
+    public int controllerNumber;
+
     public GameObject[] satellites;
     public int selected = 0;
     //public GameObject objectToSpawn;
@@ -23,7 +25,7 @@ public class PlayerControlScript : MonoBehaviour
     {
         
         // Switch Satellites 
-        if (Input.GetButtonDown("Select Satellite"))
+        if (Input.GetButtonDown(controllerNumber + "P Select Satellite"))
         {
             if (selected < satellites.Length - 1)
                 selected++;
@@ -33,9 +35,8 @@ public class PlayerControlScript : MonoBehaviour
         }
 
         // Hold to charge & launch
-        if (Input.GetButton("Launch Satellite"))
+        if (Input.GetButton(controllerNumber + "P Launch Satellite"))
         {
-            //launchPower += Time.deltaTime * launchChargeModifier;
             launchPower = Mathf.Clamp(launchPower + Time.deltaTime * launchChargeModifier, 0.0f, launchChargeModifier * 2);
         }
         else if(launchPower > 0.0f)
