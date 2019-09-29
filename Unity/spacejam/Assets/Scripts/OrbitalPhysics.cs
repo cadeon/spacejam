@@ -24,7 +24,7 @@ public class OrbitalPhysics : MonoBehaviour
         planet = GameObject.Find("Planet");
         // Need to handle drag. This is once per update. Gravity is the loop below.
         float planetDistance = (planet.transform.position - gameObject.transform.position).magnitude;
-        double Cd = 0.1; //Should be possible to set per company / satellite
+        double Cd = 0.2; //Should be possible to set per company / satellite
         double drag = (Cd * (1 / planetDistance) * rb.velocity.magnitude);
 
         rb.drag = (float)drag;
