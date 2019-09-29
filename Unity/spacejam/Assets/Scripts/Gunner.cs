@@ -24,6 +24,7 @@ public class Gunner : MonoBehaviour
 	{
 		timeToFire = fireRate;
 		satSelf = GetComponent<Satellite>();
+		teamsMngr = GameObject.FindGameObjectWithTag("TeamsManager").GetComponent<TeamsManager>();
 	}
 
 	void Update()
@@ -54,6 +55,9 @@ public class Gunner : MonoBehaviour
 		v.x += offset;
 		v.y += offset;
 
+		// v.x += transform.position.x;
+		// v.y += transform.position.y;
+
 		return v;
 	}
 
@@ -76,12 +80,14 @@ public class Gunner : MonoBehaviour
 			}
 		}
 
+		Debug.Log(target.gameObject.name);
+
 		return target;
 	}
 
 	private void Fire(Vector2 vec)
 	{
-		GameObject proj = Instantiate(projectile, vec, transform.rotation);
+		GameObject proj = Instantiate(projectile, (vec + new Vector2(transform.position.x, transform.position.y)), transform.rotation);
 		proj.GetComponent<Rigidbody2D>().AddForce(vec * power);
 	}
 }
