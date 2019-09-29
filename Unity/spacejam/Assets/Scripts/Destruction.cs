@@ -10,16 +10,11 @@ public class Destruction : MonoBehaviour
     bool isQuitting = false;
     float debrisInitialDistance = 1.0f;
     float debrisInitialVelocity = 90.0f;
-    public AudioSource destroySound;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         // TODO: Add code that insta-destroys the satellite if it touches a planet. Perhaps relating to the object's mass and/or velocity. 
         TakeDamage(1);
-
-        // Play a sound?
-        destroySound.enabled = true;
-        destroySound.Play();
     }
 
     void TakeDamage(int damageTaken)
@@ -38,7 +33,6 @@ public class Destruction : MonoBehaviour
 
     private void OnDestroy()
     {
-        
         // TODO: Spawn debris 
         if (!isQuitting)
         {
@@ -51,9 +45,6 @@ public class Destruction : MonoBehaviour
                 debris.transform.position = transform.position + (Vector3)randomVector*debrisInitialDistance;
                 debris.GetComponent<Rigidbody2D>().AddForce(randomVector*debrisInitialVelocity);
             }
-            
-           
-
         }
     }
 
