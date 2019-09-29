@@ -11,10 +11,12 @@ public class Destruction : MonoBehaviour
     float debrisInitialDistance = 1.0f;
     float debrisInitialVelocity = 90.0f;
     BoomBox boombox;
+    BoomBox screambox;
 
 
     void Start() {
         boombox = GameObject.FindGameObjectWithTag("BoomBox").GetComponent<BoomBox>();
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -22,6 +24,11 @@ public class Destruction : MonoBehaviour
         // TODO: Add code that insta-destroys the satellite if it touches a planet. Perhaps relating to the object's mass and/or velocity. 
 
         TakeDamage(1);
+        if (gameObject.name == "Planet")
+        {
+            boombox.Scream();
+        }
+       
     }
 
     void TakeDamage(int damageTaken)
