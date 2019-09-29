@@ -33,7 +33,7 @@ public class PlayerControlScript : MonoBehaviour
         }
 
         // Hold to charge & launch
-        if (Input.GetAxis("RightTrigger") != 0)
+        if (Input.GetButton("Launch Satellite"))
         {
             //launchPower += Time.deltaTime * launchChargeModifier;
             launchPower = Mathf.Clamp(launchPower + Time.deltaTime * launchChargeModifier, 0.0f, launchChargeModifier * 2);
