@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8021886884579574283}
   - component: {fileID: 7397052118889518765}
   m_Layer: 0
-  m_Name: SampleSatellite
+  m_Name: Sat_MoonRabbit
   m_TagString: Gravity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

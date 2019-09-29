@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerControlScript : MonoBehaviour
 {
+    public float aimSpeed = 50f;
     public int controllerNumber;
+    public float aimX;
+    public float aimY;
 
     public GameObject[] satellites;
     public int selected = 0;
@@ -30,8 +33,8 @@ public class PlayerControlScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        // Switch Satellites 
+        // Switch Satellites (Feature Removed)
+        /*
         if (Input.GetButtonDown(controllerNumber + "P Select Satellite"))
         {
             if (selected < satellites.Length - 1)
@@ -39,7 +42,7 @@ public class PlayerControlScript : MonoBehaviour
             else
                 selected = 0;
             //Debug.Log("Selected Satellite: " + selected);
-        }
+        }*/
 
         // Hold to charge & launch
         if (Input.GetButton(controllerNumber + "P Launch Satellite"))
