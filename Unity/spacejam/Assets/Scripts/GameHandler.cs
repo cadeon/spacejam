@@ -9,8 +9,6 @@ public class GameHandler : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        healthBar.SetSize(.4f);
+        healthBar.SetSize(.1f);
     }
-
-
 }

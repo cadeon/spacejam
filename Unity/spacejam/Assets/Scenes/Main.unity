@@ -693,6 +693,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8899248075521577772, guid: 7b7581507a6c9e047b219f43b4bb1700,
+        type: 3}
+      propertyPath: planet
+      value: 
+      objectReference: {fileID: 249204415}
+    - target: {fileID: 8899248075521577772, guid: 7b7581507a6c9e047b219f43b4bb1700,
+        type: 3}
+      propertyPath: barSprite
+      value: 
+      objectReference: {fileID: 852112733}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b7581507a6c9e047b219f43b4bb1700, type: 3}
 --- !u!1001 &780879234
@@ -809,7 +819,7 @@ PrefabInstance:
     - target: {fileID: 8182998283980907170, guid: c4ee6a66eab219c449ef12ae44d4e8b4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8182998283980907170, guid: c4ee6a66eab219c449ef12ae44d4e8b4,
         type: 3}
@@ -940,6 +950,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807359031}
   m_CullTransparentMesh: 0
+--- !u!1 &852112733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8899248073679899454, guid: 7b7581507a6c9e047b219f43b4bb1700,
+    type: 3}
+  m_PrefabInstance: {fileID: 626032024}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &917480204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5329869509646980824, guid: c4ee6a66eab219c449ef12ae44d4e8b4,
