@@ -7,6 +7,9 @@ public class PlayerControlScript : MonoBehaviour
     public GameObject[] satellites;
     public int selected = 0;
     //public GameObject objectToSpawn;
+    float launchChargeModifier = 400.0f;   // A multiplier for the charge time. 250.0 is default, but can be changed. 
+    float launchChargeCap = 800.0f;   // The max charge 
+    float launchChargeMinimum = 100.0f;   // The minimum charge to fire a satellite
     GameObject spawnedObject;
     public float launchPower;
     public Transform frontEnd;
@@ -14,9 +17,11 @@ public class PlayerControlScript : MonoBehaviour
     List<GameObject> mySatellites = new List<GameObject>(); // An array to store ALL satellites launched by this player. Will be useful for scoring. 
                                                             // Destroyed satelites will be NULL, so take this into account when scoring. 
 
+
     // Update is called once per frame
     void Update()
     {
+        
         // Switch Satellites 
         if (Input.GetButtonDown("Select Satellite"))
         {
@@ -30,14 +35,18 @@ public class PlayerControlScript : MonoBehaviour
         // Hold to charge & launch
         if (Input.GetAxis("RightTrigger") != 0)
         {
-            launchPower += 250 * Time.deltaTime;
+            //launchPower += Time.deltaTime * launchChargeModifier;
+            launchPower = Mathf.Clamp(launchPower + Time.deltaTime * launchChargeModifier, 0.0f, launchChargeModifier * 2);
         }
         else if(launchPower > 0.0f)
         {
-            spawnedObject = Instantiate(satellites[selected], transform.position, Quaternion.identity);
-            spawnedObject.GetComponent<Rigidbody2D>().AddForce((transform.position - backEnd.position) * launchPower);
+            if (launchPower > launchChargeMinimum)
+            {
+                spawnedObject = Instantiate(satellites[selected], transform.position, Quaternion.identity);
+                spawnedObject.GetComponent<Rigidbody2D>().AddForce((Vector2)((transform.position - backEnd.position) * launchPower));
+                mySatellites.Add(spawnedObject);    // Add satellite to list
+            }
             launchPower = 0.0f;
-            mySatellites.Add(spawnedObject);    // Add satellite to list
         }
     }
 }
