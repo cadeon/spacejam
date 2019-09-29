@@ -1641,6 +1641,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoomBox
       objectReference: {fileID: 0}
+    - target: {fileID: 456608805764249800, guid: 297b567893bc2434b99e9c770f933e80,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 456608805764249803, guid: 297b567893bc2434b99e9c770f933e80,
         type: 3}
       propertyPath: m_LocalPosition.x
