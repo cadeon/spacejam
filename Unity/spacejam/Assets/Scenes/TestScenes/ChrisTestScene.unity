@@ -564,6 +564,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9106574119954211876, guid: ddcc315124f4b0f49ae59cf3d9531549,
+        type: 3}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: 2daf0e8c8313a47c29f81190e79cb33b, type: 2}
+    - target: {fileID: 9106574119954211876, guid: ddcc315124f4b0f49ae59cf3d9531549,
+        type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 2daf0e8c8313a47c29f81190e79cb33b, type: 2}
+    - target: {fileID: 4540240888824506189, guid: ddcc315124f4b0f49ae59cf3d9531549,
+        type: 3}
+      propertyPath: m_Name
+      value: Planet
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddcc315124f4b0f49ae59cf3d9531549, type: 3}
 --- !u!1001 &2115307531
