@@ -47,24 +47,25 @@ public class ClickToPlace : MonoBehaviour
             Satellite sat = spawnedObject.GetComponent<Satellite>();
             if(sat != null)
             {
-                switch (sat.team)
-                {
-                    case Team.TEAM1:
-                        teamsMngr.AddSat(1, spawnedObject);
-                        break;
+                teamsMngr.AddSat(sat.team, spawnedObject);
+                // switch (sat.team)
+                // {
+                //     case Team.TEAM1:
+                //         teamsMngr.AddSat(1, spawnedObject);
+                //         break;
                 
-                    case Team.TEAM2:
-                        teamsMngr.AddSat(2, spawnedObject);
-                        break;
+                //     case Team.TEAM2:
+                //         teamsMngr.AddSat(2, spawnedObject);
+                //         break;
 
-                    case Team.TEAM3:
-                        teamsMngr.AddSat(3, spawnedObject);
-                        break;
+                //     case Team.TEAM3:
+                //         teamsMngr.AddSat(3, spawnedObject);
+                //         break;
 
-                    case Team.TEAM4:
-                        teamsMngr.AddSat(4, spawnedObject);
-                        break;
-                }
+                //     case Team.TEAM4:
+                //         teamsMngr.AddSat(4, spawnedObject);
+                //         break;
+                // }
             }
 
             launchPower = 0f;

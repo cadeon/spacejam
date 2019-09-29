@@ -10,6 +10,9 @@ public class Gunner : MonoBehaviour
 	public Transform target;
 	public int power;
 
+	// reference to own satellite
+	private Satellite satSelf;
+
 	// NOTE: Offset needs to be increased if size of gunner's collider is expanded, or will destroy self
 	public float offset = 0.1f;
 
@@ -20,6 +23,7 @@ public class Gunner : MonoBehaviour
 	void Start()
 	{
 		timeToFire = fireRate;
+		satSelf = GetComponent<Satellite>();
 	}
 
 	void Update()
@@ -56,7 +60,7 @@ public class Gunner : MonoBehaviour
 	// need to select target from teams manager, because tags are unavailable and names are unreliable
 	private Transform SelectTarget()
 	{
-		foreach(GameObject entity in teamsMngr.team1)
+		foreach(GameObject entity in teamsMngr.EnemyTeams(satSelf.team))
 		{
 			if(entity == null)
 				continue;

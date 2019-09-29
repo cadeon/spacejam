@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e130a53f1e64549bdc10eaf13a0c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 1
+  team: 0
 --- !u!1 &277231047 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 118931987274382205, guid: 7223973e2e6cf8645b4a32d9bcc01bfe,
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e130a53f1e64549bdc10eaf13a0c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 1
+  team: 2
 --- !u!4 &507173545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 118931987274382177, guid: 7223973e2e6cf8645b4a32d9bcc01bfe,
@@ -500,12 +500,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team1:
+  - {fileID: 843496976}
   - {fileID: 203124839}
+  team2:
+  - {fileID: 1080511793}
+  team3:
+  - {fileID: 277231047}
+  team4: []
+  team1Enemies:
   - {fileID: 1080511793}
   - {fileID: 277231047}
-  team2: []
-  team3: []
-  team4: []
+  team2Enemies: []
+  team3Enemies: []
+  team4Enemies: []
 --- !u!1001 &1998028492
 PrefabInstance:
   m_ObjectHideFlags: 0
