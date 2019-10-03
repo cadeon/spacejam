@@ -26,7 +26,7 @@ public class OrbitalPhysics : MonoBehaviour
         if (planet)
         {
             float planetDistance = (planet.transform.position - gameObject.transform.position).magnitude;
-            double Cd = 0.2; //Should be possible to set per company / satellite
+            double Cd = 0.1; //Should be possible to set per company / satellite
             double drag = (Cd * (1 / planetDistance) * rb.velocity.magnitude);
 
             rb.drag = (float)drag;
