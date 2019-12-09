@@ -6,7 +6,7 @@ public class OrbitalPhysics : MonoBehaviour
 {
     // Gravity behavior between bodies is completely dependent on body mass
     // There's no distance limit to gravity / it does not increase or decrease over distance
-    // Initialize an array of GameObjects to be the planets 
+    // Initialize an array of GameObjects to be the planets
     GameObject[] gravityBodies;
     GameObject planet;
     Rigidbody2D rb;
@@ -26,12 +26,12 @@ public class OrbitalPhysics : MonoBehaviour
         if (planet)
         {
             float planetDistance = (planet.transform.position - gameObject.transform.position).magnitude;
-            double Cd = 0.1; //Should be possible to set per company / satellite
+            double Cd = 0.05; //Should be possible to set per company / satellite
             double drag = (Cd * (1 / planetDistance) * rb.velocity.magnitude);
 
             rb.drag = (float)drag;
         }
-        
+
 
         // Handles gravity between this body and all other bodies
         foreach (GameObject gravityBody in gravityBodies)
@@ -49,23 +49,23 @@ public class OrbitalPhysics : MonoBehaviour
 
 
 
-    /* 
+    /*
  * Original suggested code from https://answers.unity.com/questions/1067579/how-to-make-a-central-point-of-gravity.html
- * 
+ *
  using UnityEngine;
  using System.Collections;
- 
+
  public class Bullet2 : MonoBehaviour {
-     
+
      public float maxGravDist = 4.0f;
      public float maxGravity = 35.0f;
- 
+
      GameObject[] planets;
- 
+
      void Start () {
          planets = GameObject.FindGameObjectsWithTag("Planet");
      }
-     
+
      void FixedUpdate () {
          foreach(GameObject planet in planets) {
              float dist = Vector3.Distance(planet.transform.position, transform.position);
@@ -78,6 +78,3 @@ public class OrbitalPhysics : MonoBehaviour
  }
  */
 }
-
-
-
